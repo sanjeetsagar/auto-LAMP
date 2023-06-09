@@ -65,7 +65,6 @@ if [[ $install_lamp = 'y' ]]; then
     #Trying To Open Ports
     if lsof -Pi :80 -sTCP:LISTEN -t >/dev/null ; then
         echo "Port 80 is already open!"
-        exit 1
     else
         echo "Port 80 not open or allowed."
         echo "Opening port 80 in ufw firewall..."
